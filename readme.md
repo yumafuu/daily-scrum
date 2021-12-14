@@ -1,3 +1,3 @@
 ```
-go get github.com/YumaFuu/daily-scrum-cli/cmd/drepo
+go install github.com/YumaFuu/daily-scrum-cli/cmd/drepo@latest
 ```
