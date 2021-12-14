@@ -176,10 +176,13 @@ func main() {
 	f := `
 前回やったこと
   %s
+
 今日やること
   %s
+
 困っていること
   %s
+
 何か一言
   %s
 `
@@ -190,6 +193,9 @@ func main() {
 	v4 := strings.ReplaceAll(l[3].Value(), ",", "\n  ")
 
 	s := fmt.Sprintf(f, v1, v2, v3, v4)
+	fmt.Println("copied!")
+	fmt.Println("=============")
 	fmt.Println(s)
+	fmt.Println("=============")
 	clipboard.WriteAll(s)
 }
