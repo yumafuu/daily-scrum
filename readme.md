@@ -1,3 +1,3 @@
 ```
-go install github.com/YumaFuu/daily-scrum@latest
+$ go install github.com/YumaFuu/daily-scrum@latest
 ```
