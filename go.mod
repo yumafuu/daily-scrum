@@ -1,4 +1,4 @@
-module drepo
+module daily-scrum
 
 go 1.16
 
