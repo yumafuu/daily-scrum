@@ -1,4 +1,4 @@
-module daily-scrum
+module github.com/YumaFuu/daily-scrum
 
 go 1.16
 
