@@ -175,27 +175,29 @@ func main() {
 	l := m.inputs
 	f := `
 前回やったこと
-  %s
+  • %s
 
 今日やること
-  %s
+  • %s
 
 困っていること
-  %s
+  • %s
 
 何か一言
-  %s
+  • %s
 `
 
-	v1 := strings.ReplaceAll(l[0].Value(), ",", "\n  ")
-	v2 := strings.ReplaceAll(l[1].Value(), ",", "\n  ")
-	v3 := strings.ReplaceAll(l[2].Value(), ",", "\n  ")
-	v4 := strings.ReplaceAll(l[3].Value(), ",", "\n  ")
+	v1 := strings.ReplaceAll(l[0].Value(), ",", "\n  • ")
+	v2 := strings.ReplaceAll(l[1].Value(), ",", "\n  • ")
+	v3 := strings.ReplaceAll(l[2].Value(), ",", "\n  • ")
+	v4 := strings.ReplaceAll(l[3].Value(), ",", "\n  • ")
 
 	s := fmt.Sprintf(f, v1, v2, v3, v4)
-	fmt.Println("copied!")
-	fmt.Println("=============")
+	a := os.Args[1]
+
+	if a == "-c" {
+		clipboard.WriteAll(s)
+	}
+
 	fmt.Println(s)
-	fmt.Println("=============")
-	clipboard.WriteAll(s)
 }
