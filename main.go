@@ -193,9 +193,8 @@ func main() {
 	v4 := strings.ReplaceAll(l[3].Value(), ",", "\n  • ")
 
 	s := fmt.Sprintf(f, v1, v2, v3, v4)
-	a := os.Args[1]
 
-	if a == "-c" {
+	if len(os.Args) > 1 && os.Args[1] == "-c" {
 		clipboard.WriteAll(s)
 	}
 
